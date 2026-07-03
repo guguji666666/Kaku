@@ -95,6 +95,7 @@ config.macos_window_background_blur = <span class="tok-n">20</span>  <span class
           <p><code>RESIZE</code> 保留从边缘缩放窗口和用标签栏拖动的能力，只移除关闭/最小化/缩放按钮。</p>
           <p><strong>内边距</strong></p>
           <pre><code class="language-lua">config.window_padding = { left = <span class="tok-s">'24px'</span>, right = <span class="tok-s">'24px'</span>, top = <span class="tok-s">'40px'</span>, bottom = <span class="tok-s">'20px'</span> }</code></pre>
+          <p>尺寸支持 <code>px</code>、<code>pt</code>、<code>cell</code> 和 <code>%</code> 四种单位。<code>px</code> 是物理像素，不随屏幕 DPI 缩放，同样的数值在高分屏上看起来只有 1080p 屏的一半左右。希望跨屏一致时改用 <code>pt</code>（随 DPI 缩放）或 <code>cell</code>（随终端单元格大小），例如 <code>top = '15pt'</code>。</p>
           <h2 id="configuration-terminal-behavior"><a class="anchor" href="#configuration-terminal-behavior" aria-label="链接到「终端行为」">#</a>终端行为</h2><p><strong>光标</strong></p>
           <pre><code class="language-lua">config.default_cursor_style = <span class="tok-s">"BlinkingBar"</span>
 config.cursor_thickness = <span class="tok-s">"2px"</span>

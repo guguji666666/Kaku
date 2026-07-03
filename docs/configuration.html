@@ -95,6 +95,7 @@ config.macos_window_background_blur = <span class="tok-n">20</span>  <span class
           <p><code>RESIZE</code> preserves the ability to resize the window from its edges and drag it by the tab bar; it only removes the close/minimize/zoom buttons.</p>
           <p><strong>Padding</strong></p>
           <pre><code class="language-lua">config.window_padding = { left = <span class="tok-s">'24px'</span>, right = <span class="tok-s">'24px'</span>, top = <span class="tok-s">'40px'</span>, bottom = <span class="tok-s">'20px'</span> }</code></pre>
+          <p>Sizes accept <code>px</code>, <code>pt</code>, <code>cell</code>, and <code>%</code>. <code>px</code> is physical pixels and does not scale with screen DPI, so the same value looks about half as tall on a HiDPI display as on a 1080p one. Use <code>pt</code> (scales with DPI) or <code>cell</code> (follows the terminal cell size) when spacing should look the same across displays, for example <code>top = '15pt'</code>.</p>
           <h2 id="configuration-terminal-behavior"><a class="anchor" href="#configuration-terminal-behavior" aria-label="Link to Terminal Behavior">#</a>Terminal Behavior</h2><p><strong>Cursor</strong></p>
           <pre><code class="language-lua">config.default_cursor_style = <span class="tok-s">"BlinkingBar"</span>
 config.cursor_thickness = <span class="tok-s">"2px"</span>
