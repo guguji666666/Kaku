@@ -15,7 +15,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <nav class="site-nav" aria-label="Primary navigation"><div class="wide nav-inner"><a class="brand" href="/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.12.4</a><div class="nav-links"><a href="/docs/" aria-current="page">Docs</a></div><div class="nav-actions"><a class="nav-pill" href="/zh/docs/features" hreflang="zh-CN">中</a><a class="nav-pill" aria-current="page" href="/docs/features" hreflang="en">EN</a><a class="nav-icon" href="https://github.com/tw93/Kaku" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="nav-icon" href="https://x.com/HiTw93" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></nav>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wide nav-inner"><a class="brand" href="/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.13.0</a><div class="nav-links"><a href="/docs/" aria-current="page">Docs</a></div><div class="nav-actions"><a class="nav-pill" href="/zh/docs/features" hreflang="zh-CN">中</a><a class="nav-pill" aria-current="page" href="/docs/features" hreflang="en">EN</a><a class="nav-icon" href="https://github.com/tw93/Kaku" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="nav-icon" href="https://x.com/HiTw93" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></nav>
   <main id="main-content" class="docs-page">
     <header class="page-hero doc-hero"><div class="wide"><span class="label">Docs</span><h1>Features</h1><p>Kaku Assistant, AI Chat, error recovery, natural-language commands, and built-in shell tools.</p></div></header>
     <section class="section docs-section">
@@ -28,37 +28,36 @@
         <article class="doc-content">
           <h2 id="features-kaku-assistant"><a class="anchor" href="#features-kaku-assistant" aria-label="Link to Kaku Assistant">#</a>Kaku Assistant</h2><p>Kaku Assistant has two modes: automatic error recovery and on-demand command generation from natural language.</p>
           <p><strong>Setup</strong></p>
-          <p>Run <code>kaku ai</code> to open the AI settings panel. Enable Kaku Assistant, then choose the provider path that matches how you already work:</p>
-          <ol>
-            <li>Use <strong>Codex</strong> to reuse your existing <code>codex</code> / ChatGPT login without a separate API key.</li>
-            <li>Use <strong>OpenAI</strong> when you want to bring an API key directly.</li>
-            <li>Use <strong>Custom</strong> for OpenAI-compatible gateways, local proxies, or enterprise endpoints.</li>
-          </ol>
+          <p>Run <code>kaku ai</code> to open the AI settings panel. Enable Kaku Assistant and edit the model, auth, base URL, and API key fields directly.</p>
           <table>
           <thead>
           <tr>
-          <th align="left">Provider</th>
-          <th align="left">Base URL</th>
-          <th align="left">Models</th>
+          <th align="left">Field</th>
+          <th align="left">Description</th>
           </tr>
           </thead>
           <tbody><tr>
-          <td align="left">OpenAI</td>
-          <td align="left"><code>https://api.openai.com/v1</code></td>
-          <td align="left">(free text)</td>
+          <td align="left">Auth Type</td>
+          <td align="left">API key or Codex CLI login</td>
           </tr>
           <tr>
-          <td align="left">Codex</td>
-          <td align="left">(uses your <code>codex</code> login, no key)</td>
-          <td align="left"><code>gpt-5-codex</code></td>
+          <td align="left">Simple Model</td>
+          <td align="left">Used for <code>#</code> command generation, command fixes, and lightweight chat</td>
           </tr>
           <tr>
-          <td align="left">Custom</td>
-          <td align="left">(manual)</td>
-          <td align="left">(free text)</td>
+          <td align="left">Deep Model</td>
+          <td align="left">Used for primary <code>Cmd + L</code> / <code>k</code> chat and tool use</td>
+          </tr>
+          <tr>
+          <td align="left">Base URL</td>
+          <td align="left">OpenAI-compatible API root, such as <code>https://api.openai.com/v1</code></td>
+          </tr>
+          <tr>
+          <td align="left">API Key</td>
+          <td align="left">API key from the selected AI service when Auth Type is API key</td>
           </tr>
           </tbody></table>
-          <p>Selecting a provider auto-fills the base URL and populates the model dropdown. For Codex, set <strong>Auth Type</strong> to <code>codex</code> and pick a Codex model such as <code>gpt-5-codex</code>.</p>
+          <p>For custom OpenAI-compatible services, keep Auth Type set to API key, enter the service's Base URL, and set the model names manually.</p>
           <h2 id="features-ai-chat-panel"><a class="anchor" href="#features-ai-chat-panel" aria-label="Link to AI Chat Panel">#</a>AI Chat Panel</h2><p>Press <code>Cmd + L</code> to open the built-in AI chat panel. It streams Markdown answers,
           highlights code blocks, can include terminal context, and can use approved tools
           for project files, shell commands, web search, and memory. Press <code>Shift + Tab</code>
@@ -96,7 +95,7 @@ kaku chat</code></pre>
           </tr>
           <tr>
           <td align="left"><code>api_key</code></td>
-          <td align="left">Your provider API key</td>
+          <td align="left">Your AI service API key</td>
           </tr>
           <tr>
           <td align="left"><code>model</code></td>
@@ -136,11 +135,11 @@ kaku chat</code></pre>
           </tr>
           <tr>
           <td align="left"><code>chat_tools_enabled</code></td>
-          <td align="left">Set to <code>false</code> to disable tool calling for chat providers without tool support</td>
+          <td align="left">Set to <code>false</code> to disable tool calling for chat services without tool support</td>
           </tr>
           <tr>
           <td align="left"><code>auth_type</code></td>
-          <td align="left">Advanced auth mode, e.g. <code>api_key</code>, <code>copilot</code>, or <code>codex</code></td>
+          <td align="left">Advanced auth mode, e.g. <code>api_key</code> or <code>codex</code></td>
           </tr>
           <tr>
           <td align="left"><code>memory_curator_model</code></td>
@@ -157,7 +156,7 @@ kaku chat</code></pre>
           <h2 id="features-applescript"><a class="anchor" href="#features-applescript" aria-label="Link to AppleScript">#</a>AppleScript</h2><p>Kaku ships a minimal AppleScript dictionary so it shows up in Script Editor and other automation tools. The exposed surface is intentionally small and read-only apart from <code>quit</code>.</p>
           <pre><code class="language-applescript"><span class="tok-k">tell</span> <span class="tok-b">application</span> <span class="tok-s">"Kaku"</span>
   <span class="tok-k">get</span> name        <span class="tok-c">-- "Kaku"</span>
-  <span class="tok-k">get</span> <span class="tok-b">version</span>     <span class="tok-c">-- e.g. "0.12.4"</span>
+  <span class="tok-k">get</span> <span class="tok-b">version</span>     <span class="tok-c">-- e.g. "0.13.0"</span>
   <span class="tok-k">get</span> frontmost   <span class="tok-c">-- true / false</span>
   <span class="tok-b">quit</span>            <span class="tok-c">-- optional `saving ask|yes|no`</span>
 <span class="tok-k">end</span> <span class="tok-k">tell</span></code></pre>

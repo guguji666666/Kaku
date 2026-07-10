@@ -15,7 +15,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到内容</a>
-  <nav class="site-nav" aria-label="主导航"><div class="wide nav-inner"><a class="brand" href="/zh/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.12.4</a><div class="nav-links"><a href="/zh/docs/" aria-current="page">文档</a></div><div class="nav-actions"><a class="nav-pill" aria-current="page" href="/zh/docs/features" hreflang="zh-CN">中</a><a class="nav-pill" href="/docs/features" hreflang="en">EN</a><a class="nav-icon" href="https://github.com/tw93/Kaku" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="nav-icon" href="https://x.com/HiTw93" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></nav>
+  <nav class="site-nav" aria-label="主导航"><div class="wide nav-inner"><a class="brand" href="/zh/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.13.0</a><div class="nav-links"><a href="/zh/docs/" aria-current="page">文档</a></div><div class="nav-actions"><a class="nav-pill" aria-current="page" href="/zh/docs/features" hreflang="zh-CN">中</a><a class="nav-pill" href="/docs/features" hreflang="en">EN</a><a class="nav-icon" href="https://github.com/tw93/Kaku" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="nav-icon" href="https://x.com/HiTw93" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></nav>
   <main id="main-content" class="docs-page">
     <header class="page-hero doc-hero"><div class="wide"><span class="label">文档</span><h1>功能与 AI</h1><p>Kaku Assistant、AI Chat、错误恢复、自然语言命令和内置 Shell 工具。</p></div></header>
     <section class="section docs-section">
@@ -28,37 +28,36 @@
         <article class="doc-content">
           <h2 id="features-kaku-assistant"><a class="anchor" href="#features-kaku-assistant" aria-label="链接到「Kaku Assistant」">#</a>Kaku Assistant</h2><p>Kaku Assistant 有两个模式：命令失败时自动修复，以及按需把一句人话生成命令。</p>
           <p><strong>配置</strong></p>
-          <p>运行 <code>kaku ai</code> 打开 AI 设置面板，开启 Kaku Assistant，再按你现在的使用方式选择 Provider：</p>
-          <ol>
-            <li>选 <strong>Codex</strong> 可以复用已有的 <code>codex</code> / ChatGPT 登录，不需要单独填 API key。</li>
-            <li>选 <strong>OpenAI</strong> 时直接填 API key。</li>
-            <li>选 <strong>Custom</strong> 时填写 OpenAI 兼容网关、本地代理或企业接口。</li>
-          </ol>
+          <p>运行 <code>kaku ai</code> 打开 AI 设置面板。开启 Kaku Assistant，然后直接编辑模型、鉴权、Base URL 和 API key 字段。</p>
           <table>
           <thead>
           <tr>
-          <th align="left">Provider</th>
-          <th align="left">Base URL</th>
-          <th align="left">模型</th>
+          <th align="left">字段</th>
+          <th align="left">说明</th>
           </tr>
           </thead>
           <tbody><tr>
-          <td align="left">OpenAI</td>
-          <td align="left"><code>https://api.openai.com/v1</code></td>
-          <td align="left">（自由填写）</td>
+          <td align="left">Auth Type</td>
+          <td align="left">API key 或 Codex CLI 登录</td>
           </tr>
           <tr>
-          <td align="left">Codex</td>
-          <td align="left">（用你已有的 <code>codex</code> 登录，免 key）</td>
-          <td align="left"><code>gpt-5-codex</code></td>
+          <td align="left">Simple Model</td>
+          <td align="left">用于 <code>#</code> 命令生成、命令修复和轻量对话</td>
           </tr>
           <tr>
-          <td align="left">Custom</td>
-          <td align="left">（手动填写）</td>
-          <td align="left">（自由填写）</td>
+          <td align="left">Deep Model</td>
+          <td align="left">用于主力 <code>Cmd + L</code> / <code>k</code> 对话和工具调用</td>
+          </tr>
+          <tr>
+          <td align="left">Base URL</td>
+          <td align="left">OpenAI 兼容 API 根 URL，例如 <code>https://api.openai.com/v1</code></td>
+          </tr>
+          <tr>
+          <td align="left">API Key</td>
+          <td align="left">Auth Type 为 API key 时填写服务方 API key</td>
           </tr>
           </tbody></table>
-          <p>选好 Provider 后会自动填好 base URL，并把可用模型填进下拉框。使用 Codex 时，把 <strong>Auth Type</strong> 设为 <code>codex</code>，再选一个 Codex 模型。</p>
+          <p>使用自定义 OpenAI 兼容服务时，Auth Type 保持 API key，填写服务方的 Base URL，再手动设置模型名。</p>
           <h2 id="features-ai-chat-panel"><a class="anchor" href="#features-ai-chat-panel" aria-label="链接到「AI Chat 面板」">#</a>AI Chat 面板</h2><p>按 <code>Cmd + L</code> 打开内置的 AI Chat 面板。它会流式输出 Markdown 答案，
           高亮代码块，可以带上终端上下文，也可以在你授权后调用工具，
           访问项目文件、shell 命令、网页搜索和记忆。当 Simple Model 和 Deep Model
@@ -94,7 +93,7 @@ kaku chat</code></pre>
           </tr>
           <tr>
           <td align="left"><code>api_key</code></td>
-          <td align="left">你的 Provider API key</td>
+          <td align="left">你的 AI 服务 API key</td>
           </tr>
           <tr>
           <td align="left"><code>model</code></td>
@@ -134,11 +133,11 @@ kaku chat</code></pre>
           </tr>
           <tr>
           <td align="left"><code>chat_tools_enabled</code></td>
-          <td align="left">设为 <code>false</code> 可对不支持工具的对话 Provider 关闭工具调用</td>
+          <td align="left">设为 <code>false</code> 可对不支持工具的对话服务关闭工具调用</td>
           </tr>
           <tr>
           <td align="left"><code>auth_type</code></td>
-          <td align="left">高级鉴权模式，比如 <code>api_key</code>、<code>copilot</code> 或 <code>codex</code></td>
+          <td align="left">高级鉴权模式，比如 <code>api_key</code> 或 <code>codex</code></td>
           </tr>
           <tr>
           <td align="left"><code>memory_curator_model</code></td>
@@ -154,7 +153,7 @@ kaku chat</code></pre>
           <h2 id="features-applescript"><a class="anchor" href="#features-applescript" aria-label="链接到「AppleScript」">#</a>AppleScript</h2><p>Kaku 内置一份极简的 AppleScript 字典，因此它会出现在 Script Editor 和其他自动化工具里。暴露的接口故意做得很小，除了 <code>quit</code> 之外都是只读的。</p>
           <pre><code class="language-applescript"><span class="tok-k">tell</span> <span class="tok-b">application</span> <span class="tok-s">"Kaku"</span>
   <span class="tok-k">get</span> name        <span class="tok-c">-- "Kaku"</span>
-  <span class="tok-k">get</span> <span class="tok-b">version</span>     <span class="tok-c">-- e.g. "0.12.4"</span>
+  <span class="tok-k">get</span> <span class="tok-b">version</span>     <span class="tok-c">-- e.g. "0.13.0"</span>
   <span class="tok-k">get</span> frontmost   <span class="tok-c">-- true / false</span>
   <span class="tok-b">quit</span>            <span class="tok-c">-- optional `saving ask|yes|no`</span>
 <span class="tok-k">end</span> <span class="tok-k">tell</span></code></pre>

@@ -29,7 +29,7 @@
     "name": "Kaku",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "macOS",
-    "softwareVersion": "0.12.4",
+    "softwareVersion": "0.13.0",
     "url": "https://kaku.fun",
     "downloadUrl": "https://github.com/tw93/Kaku/releases/latest",
     "license": "https://opensource.org/licenses/MIT",
@@ -76,7 +76,7 @@
         "name": "Kaku 和 Warp 有什么区别？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Warp 是闭源并偏云端账号体系。Kaku 是 MIT 开源，不需要账号，AI 请求只发往你配置的 Provider。"
+          "text": "Warp 是闭源并偏云端账号体系。Kaku 是 MIT 开源，不需要账号，AI 请求只发往你配置的 AI 服务。"
         }
       },
       {
@@ -103,7 +103,7 @@
   <a class="skip-link" href="#main-content">跳到正文</a>
   <nav class="site-nav" aria-label="主导航">
     <div class="wide nav-inner">
-      <a class="brand" href="/zh/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.12.4</a>
+      <a class="brand" href="/zh/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.13.0</a>
       <div class="nav-links"><a href="/zh/docs/">文档</a></div>
       <div class="nav-actions">
         <a class="nav-pill" aria-current="page" href="/zh/" hreflang="zh-CN">中</a>
@@ -199,9 +199,9 @@
         </div>
         <div class="workflow-list">
           <article class="workflow-item"><span class="mark">01</span><h3>安装</h3><p>用 DMG，或运行 <code>brew install tw93/tap/kakuku</code>，再用 <code>kaku doctor</code> 检查 app、PATH 和 shell 集成。</p></article>
-          <article class="workflow-item"><span class="mark">02</span><h3>AI 设置</h3><p>运行 <code>kaku ai</code>，选择 Codex、OpenAI 或自定义 Provider。配置好后，<span class="sk">Cmd + L</span> 打开 AI Chat。</p></article>
+          <article class="workflow-item"><span class="mark">02</span><h3>AI 设置</h3><p>运行 <code>kaku ai</code>，开启 Kaku Assistant，选择 Auth Type，再设置 Simple Model 和 Deep Model。配置好后，<span class="sk">Cmd + L</span> 打开 AI Chat。</p></article>
           <article class="workflow-item"><span class="mark">03</span><h3>工具</h3><p><span class="sk">Cmd + Shift + G</span> 打开 Lazygit，<span class="sk">Cmd + Shift + Y</span> 打开 Yazi，SSH 会话里用 <span class="sk">Cmd + Shift + R</span> 挂载远端文件。</p></article>
-          <article class="workflow-item"><span class="mark">04</span><h3>配置</h3><p>打开 <code>kaku config</code> 调整字号、透明度、Smart Tab、关闭确认、快捷键和 Lua 配置。</p></article>
+          <article class="workflow-item"><span class="mark">04</span><h3>配置</h3><p>打开 <code>kaku config</code> TUI 调整字号、透明度、Smart Tab、关闭确认、快捷键和 Lua 覆盖。</p></article>
         </div>
       </div>
     </section>
@@ -229,7 +229,7 @@
           <dt>Kaku 和 iTerm2 有什么区别？</dt>
           <dd>iTerm2 是成熟的 macOS 终端。Kaku 更轻更快，带实用默认值、顺手的标签和分屏、一套精选 Shell 工具，并内建 AI 助手，开箱即用。</dd>
           <dt>Kaku 和 Warp 有什么区别？</dt>
-          <dd>Warp 是闭源并偏云端账号体系。Kaku 是 MIT 开源，不需要账号，AI 请求只发往你配置的 Provider。</dd>
+          <dd>Warp 是闭源并偏云端账号体系。Kaku 是 MIT 开源，不需要账号，AI 请求只发往你配置的 AI 服务。</dd>
           <dt>Kaku 收费吗？</dt>
           <dd>不收费，Kaku 是 MIT 协议的开源项目。</dd>
           <dt>支持 Windows 或 Linux 吗？</dt>
