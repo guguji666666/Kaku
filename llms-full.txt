@@ -25,11 +25,11 @@ Kaku keeps full Lua API compatibility with WezTerm, so an existing WezTerm confi
 ## Core features
 
 - Tabs and panes: new tab (Cmd+T), close (Cmd+W), switch (Cmd+1 to Cmd+9), find any tab or pane with Tab Navigator (Cmd+Shift+O), split panes (Cmd+D and Cmd+Shift+D), navigate panes (Cmd+Option+arrows), and broadcast input across panes to drive several at once. The shortcuts match the rest of macOS.
-- Beautiful defaults: JetBrains Mono, macOS-quality font rendering, and automatic dark and light themes that follow the system.
+- Preset defaults: JetBrains Mono, macOS-quality font rendering, and automatic dark and light themes that follow the system.
 - Fast and lightweight: roughly 40% smaller binary than upstream, fast startup, and a stripped-down GPU core.
 - Built-in AI assistant: when a command fails, Kaku drafts a fix for review. Press Cmd+Shift+E to paste the suggestion at the prompt; nothing runs on its own. Type `#` followed by a sentence to turn plain language into a command. Press Cmd+L to open AI chat once the assistant is configured.
 - Curated shell suite: Lazygit (Cmd+Shift+G), Yazi file manager (Cmd+Shift+Y), remote files (Cmd+Shift+R), plus z, completion, and syntax highlighting preconfigured.
-- Polished touches: copy on select, clickable file paths, history peek, and a visual bell.
+- Small touches: copy on select, clickable file paths, history peek, and a visual bell.
 - Lua config: full Lua API compatibility with WezTerm; bring your existing config with no migration.
 
 ## AI setup
