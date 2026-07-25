@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>About Kaku · Who builds it and why</title>
+  <meta name="description" content="Kaku is an MIT-licensed macOS terminal derived from WezTerm, built by Tw93. What it is, what it deliberately is not, and how the project is run.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-kaku-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-kaku-192.png"><link rel="apple-touch-icon" href="/img/favicon-kaku-180.png">
+  <link rel="canonical" href="https://kaku.fun/about">
+  <link rel="alternate" hreflang="en" href="https://kaku.fun/about">
+  <link rel="alternate" hreflang="zh-CN" href="https://kaku.fun/zh/about">
+  <link rel="alternate" hreflang="x-default" href="https://kaku.fun/about">
+  <link rel="alternate" type="text/markdown" href="https://kaku.fun/about.md">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Kaku",
+            "item": "https://kaku.fun/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Kaku",
+            "item": "https://kaku.fun/about"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://kaku.fun/about#article",
+        "headline": "About Kaku",
+        "name": "About Kaku",
+        "description": "Kaku is an MIT-licensed macOS terminal derived from WezTerm, built by Tw93. What it is, what it deliberately is not, and how the project is run.",
+        "url": "https://kaku.fun/about",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://kaku.fun/#website"
+        },
+        "about": {
+          "@id": "https://kaku.fun/#software"
+        },
+        "publisher": {
+          "@id": "https://kaku.fun/#organization"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Tw93",
+          "url": "https://tw93.fun"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://kaku.fun/about.md"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wide nav-inner"><a class="brand" href="/"><strong>Kaku</strong></a><span class="eyebrow-sep">·</span><a class="version-link" href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">v0.14.0</a><div class="nav-links"><a href="/docs/">Docs</a></div><div class="nav-actions"><a class="nav-pill" href="/zh/about" hreflang="zh-CN">中</a><a class="nav-pill" aria-current="page" href="/about" hreflang="en">EN</a><a class="nav-icon" href="https://github.com/tw93/Kaku" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a class="nav-icon" href="https://x.com/HiTw93" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div></div></nav>
+  <main id="main-content" class="docs-page">
+    <header class="page-hero doc-hero"><div class="wide"><span class="label">Project</span><h1>About Kaku</h1><p>A fast, out-of-the-box macOS terminal for AI coding, built in the open by one person.</p></div></header>
+    <section class="section">
+      <div class="wide">
+        <article class="doc-content prose-doc">
+          <h2 id="about-what-kaku-is">What Kaku is</h2>
+          <p>Kaku is a macOS-native terminal emulator derived from <a href="https://wezterm.org" target="_blank" rel="noopener noreferrer">WezTerm</a> and tuned for AI-assisted terminal work. It keeps the speed and the full Lua configuration surface of the upstream project, trims the binary by roughly 40%, and ships opinionated defaults so the app is useful the moment it is installed: JetBrains Mono, macOS-quality font rendering, automatic dark and light themes, fast tabs and split panes on native macOS shortcuts, and a curated shell suite with Lazygit, Yazi, remote files, z, completion, and syntax highlighting already wired up.</p>
+          <p>The name comes from 書く (<em>kaku</em>), the Japanese verb for writing: putting thought into form. Kaku is part of a small family of tools by the same author. Kaku writes code, <a href="https://github.com/tw93/Waza" target="_blank" rel="noopener noreferrer">Waza</a> (技) drills habits, and <a href="https://github.com/tw93/Kami" target="_blank" rel="noopener noreferrer">Kami</a> (紙) ships documents.</p>
+          <h2 id="about-who-builds-it">Who builds it</h2>
+          <p>Kaku is built by Tw93, an independent developer who also created <a href="https://github.com/tw93/Pake" target="_blank" rel="noopener noreferrer">Pake</a> and <a href="https://github.com/tw93/Mole" target="_blank" rel="noopener noreferrer">Mole</a>. Development happens entirely in public on GitHub: issues, pull requests, releases, and the roadmap are all visible, and the full source is MIT licensed. There is no company behind Kaku, no sales team, and no enterprise tier. Support runs through <a href="https://github.com/tw93/Kaku/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>, and the project is funded by optional <a href="https://github.com/sponsors/tw93" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a> rather than by the product itself.</p>
+          <h2 id="about-what-kaku-is-not">What Kaku deliberately is not</h2>
+          <ul>
+            <li><strong>Not an account product.</strong> There is no sign-up, no login, and no cloud relay. Install the app and it works.</li>
+            <li><strong>Not a telemetry product.</strong> Kaku does not collect usage analytics. See <a href="/privacy">Privacy</a> for the exact network calls the app makes.</li>
+            <li><strong>Not an AI service.</strong> The built-in assistant talks only to the OpenAI-compatible endpoint you configure with <code>kaku ai</code>. Kaku never proxies your prompts through a server it controls.</li>
+            <li><strong>Not cross-platform yet.</strong> macOS only. Windows and Linux are not supported and no date is promised.</li>
+            <li><strong>Not paid.</strong> Kaku is free and MIT licensed, with no paid tier and no usage limits.</li>
+          </ul>
+          <h2 id="about-how-to-use-this-site">Using this site</h2>
+          <p>Every page here has a markdown twin: append <code>.md</code> to any URL, or send <code>Accept: text/markdown</code>, and you get the same prose without the page chrome. <a href="/llms.txt">llms.txt</a> is the short index and <a href="/llms-full.txt">llms-full.txt</a> is the complete single-file summary for language models and answer engines.</p>
+          <p>Start at the <a href="/docs/">docs</a>, check the <a href="/roadmap">roadmap</a> for what is being worked on, or <a href="/contact">get in touch</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wide footer-inner"><div class="footer-mark"><img src="/img/kaku-mark.png" width="64" height="64" alt="Kaku" loading="lazy"><div><p class="wm-name">Kaku · 書</p><p class="wm-sub">A macOS terminal for AI coding.</p></div></div><div class="footer-colophon"><p class="footer-links"><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/roadmap">Roadmap</a> · <a href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">Changelog</a> · <a href="/docs/">Docs</a> · <a href="https://github.com/tw93/Kaku">GitHub</a> · <a href="https://github.com/tw93/Kaku/issues">Issues</a> · <a href="https://twitter.com/HiTw93">X</a></p><p class="footer-ethos">Built by Tw93. May your terminal stay out of the way. · Built on WezTerm · MIT · © 2026</p></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://kaku.fun/agent.json",
+  "generatedFor": "https://kaku.fun/?mode=agent",
+  "product": {
+    "name": "Kaku",
+    "tagline": "A fast, out-of-the-box macOS terminal built for AI coding.",
+    "description": "Kaku is a macOS-native terminal emulator derived from WezTerm and tuned for AI-assisted terminal work. It ships practical defaults on day one (JetBrains Mono, macOS font rendering, automatic dark and light themes), fast tabs and split panes on native macOS shortcuts, a curated shell suite (Lazygit, Yazi, remote files, z, completion, syntax highlighting), and a built-in assistant that drafts a fix when a command fails and turns plain language into commands. It keeps full Lua API compatibility with WezTerm, so existing configs work with no migration.",
+    "category": "DeveloperApplication",
+    "type": "desktop-application",
+    "version": "0.14.0",
+    "license": "MIT",
+    "licenseUrl": "https://opensource.org/licenses/MIT",
+    "homepage": "https://kaku.fun",
+    "repository": "https://github.com/tw93/Kaku",
+    "platforms": ["macos"],
+    "unsupportedPlatforms": ["windows", "linux"],
+    "price": {"amount": "0", "currency": "USD", "model": "free", "paidTier": false},
+    "author": {
+      "name": "Tw93",
+      "url": "https://tw93.fun",
+      "sameAs": ["https://github.com/tw93", "https://x.com/HiTw93"]
+    }
+  },
+  "api": {
+    "available": false,
+    "reason": "Kaku is a local macOS application, not a service. There is no HTTP API, no SDK, no MCP server, and no server-side product. Automation goes through the local `kaku` command."
+  },
+  "authentication": {
+    "required": false,
+    "accounts": false,
+    "note": "Kaku has no account system and no credentials to obtain. The optional AI assistant uses an API key that the user supplies for their own OpenAI-compatible provider; that key stays in ~/.config/kaku/assistant.toml on the user's machine."
+  },
+  "whenToUse": [
+    "Set up a macOS terminal that works immediately, without an afternoon of configuration.",
+    "Terminal work alongside AI coding, where the AI stays optional and talks only to a user-configured provider.",
+    "Replace iTerm2 with something lighter, or replace Warp without a cloud account.",
+    "Reuse an existing WezTerm Lua config with better defaults and no migration.",
+    "Privacy-sensitive setups: no telemetry, no account, and every network call documented at https://kaku.fun/privacy."
+  ],
+  "whenNotToUse": [
+    "Windows or Linux targets: unsupported, no date promised.",
+    "Hosted, browser-based, or remote terminals.",
+    "Any integration that needs a network API, SDK, or hosted tool endpoint."
+  ],
+  "install": {
+    "homebrew": "brew install tw93/tap/kakuku",
+    "homebrewNote": "Use the tap package. The unrelated Homebrew `kaku` package is a different project.",
+    "dmg": "https://github.com/tw93/Kaku/releases/latest",
+    "verify": "kaku doctor",
+    "docs": "https://kaku.fun/docs/index.md"
+  },
+  "cli": [
+    {"command": "kaku doctor", "description": "Diagnose app bundle, config directory, PATH, shell integration, and optional tools."},
+    {"command": "kaku ai", "description": "Configure Kaku Assistant: Auth Type, Base URL, Simple Model, Deep Model, API key."},
+    {"command": "kaku chat", "description": "Open AI chat from any shell, sharing the Cmd+L conversation store."},
+    {"command": "kaku config", "description": "Settings TUI for font, opacity, Smart Tab, close confirmation, shortcuts, Lua overrides."},
+    {"command": "kaku init", "description": "Install or refresh zsh/fish shell integration."},
+    {"command": "kaku update", "description": "Check for and install the latest release."},
+    {"command": "kaku reset", "description": "Remove Kaku-managed integration and state, preserving user-authored Lua."},
+    {"command": "kaku cli split-pane", "description": "Drive the multiplexer from scripts. Run `kaku cli --help` for all subcommands."}
+  ],
+  "configuration": {
+    "lua": "~/.config/kaku/kaku.lua",
+    "assistant": "~/.config/kaku/assistant.toml",
+    "note": "The Lua config is WezTerm API compatible."
+  },
+  "keyShortcuts": {
+    "Cmd+T": "New tab",
+    "Cmd+D": "Split pane",
+    "Cmd+Shift+O": "Tab Navigator",
+    "Cmd+L": "AI chat",
+    "Cmd+Shift+E": "Paste the assistant's suggested fix",
+    "Cmd+Shift+G": "Lazygit",
+    "Cmd+Shift+Y": "Yazi file manager",
+    "Cmd+Shift+R": "Remote files"
+  },
+  "docs": [
+    {"title": "Install", "url": "https://kaku.fun/docs/", "markdown": "https://kaku.fun/docs/index.md"},
+    {"title": "Guide", "url": "https://kaku.fun/docs/guide", "markdown": "https://kaku.fun/docs/guide.md"},
+    {"title": "Features", "url": "https://kaku.fun/docs/features", "markdown": "https://kaku.fun/docs/features.md"},
+    {"title": "CLI Reference", "url": "https://kaku.fun/docs/cli", "markdown": "https://kaku.fun/docs/cli.md"},
+    {"title": "Configuration", "url": "https://kaku.fun/docs/configuration", "markdown": "https://kaku.fun/docs/configuration.md"},
+    {"title": "Keybindings", "url": "https://kaku.fun/docs/keybindings", "markdown": "https://kaku.fun/docs/keybindings.md"},
+    {"title": "FAQ", "url": "https://kaku.fun/docs/faq", "markdown": "https://kaku.fun/docs/faq.md"},
+    {"title": "Contributing", "url": "https://kaku.fun/docs/contributing", "markdown": "https://kaku.fun/docs/contributing.md"},
+    {"title": "Roadmap", "url": "https://kaku.fun/roadmap", "markdown": "https://kaku.fun/roadmap.md"},
+    {"title": "About", "url": "https://kaku.fun/about", "markdown": "https://kaku.fun/about.md"},
+    {"title": "Contact", "url": "https://kaku.fun/contact", "markdown": "https://kaku.fun/contact.md"},
+    {"title": "Privacy", "url": "https://kaku.fun/privacy", "markdown": "https://kaku.fun/privacy.md"}
+  ],
+  "machineReadable": {
+    "llmsTxt": "https://kaku.fun/llms.txt",
+    "llmsFullTxt": "https://kaku.fun/llms-full.txt",
+    "docsLlmsTxt": "https://kaku.fun/docs/llms.txt",
+    "markdownHomepage": "https://kaku.fun/index.md",
+    "markdownConvention": "Append .md to any page URL, or send Accept: text/markdown. Responses carry Content-Type: text/markdown and Vary: Accept.",
+    "agentSkills": "https://kaku.fun/.well-known/agent-skills/index.json",
+    "schemaMap": "https://kaku.fun/schemamap.xml",
+    "pageFeed": "https://kaku.fun/feeds/pages.jsonl",
+    "sitemap": "https://kaku.fun/sitemap.xml"
+  },
+  "support": {
+    "issues": "https://github.com/tw93/Kaku/issues",
+    "discussions": "https://github.com/tw93/Kaku/discussions",
+    "security": "https://github.com/tw93/Kaku/security/advisories/new",
+    "contactPage": "https://kaku.fun/contact"
+  },
+  "languages": {
+    "en": "https://kaku.fun/",
+    "zh-CN": "https://kaku.fun/zh/"
+  }
+}

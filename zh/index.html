@@ -19,35 +19,163 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-kaku-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-kaku-192.png"><link rel="apple-touch-icon" href="/img/favicon-kaku-180.png">
   <link rel="alternate" hreflang="zh-CN" href="https://kaku.fun/zh/">
   <link rel="canonical" href="https://kaku.fun/zh/">
+  <link rel="alternate" type="text/markdown" href="https://kaku.fun/zh/index.md">
   <link rel="alternate" hreflang="en" href="https://kaku.fun/">
   <link rel="alternate" hreflang="x-default" href="https://kaku.fun/">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Kaku",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "macOS",
-    "softwareVersion": "0.14.0",
-    "url": "https://kaku.fun",
-    "downloadUrl": "https://github.com/tw93/Kaku/releases/latest",
-    "license": "https://opensource.org/licenses/MIT",
-    "sameAs": "https://github.com/tw93/Kaku",
-    "author": {
-      "@type": "Person",
-      "name": "Tw93",
-      "url": "https://tw93.fun",
-      "sameAs": [
-        "https://github.com/tw93",
-        "https://x.com/HiTw93"
-      ]
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://kaku.fun/#software",
+        "name": "Kaku",
+        "alternateName": "Kaku Terminal",
+        "description": "Kaku 是一个开箱即用的快速 macOS 终端，为 AI 编码而生。基于 WezTerm 深度定制，预置 JetBrains Mono、macOS 级字体渲染、跟随系统的深浅色主题、走原生 macOS 快捷键的标签页与分屏、一套配好的 shell 工具，以及一个在命令失败时草拟修复的可选 AI 助手。MIT 开源，无账号，无埋点。",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Terminal Emulator",
+        "operatingSystem": "macOS",
+        "softwareVersion": "0.14.0",
+        "url": "https://kaku.fun/zh/",
+        "downloadUrl": "https://github.com/tw93/Kaku/releases/latest",
+        "installUrl": "https://github.com/tw93/Kaku/releases/latest",
+        "softwareHelp": "https://kaku.fun/zh/docs/",
+        "screenshot": "https://kaku.fun/shots/kaku-og.webp",
+        "license": "https://opensource.org/licenses/MIT",
+        "isBasedOn": "https://wezterm.org",
+        "featureList": [
+          "标签页与分屏走原生 macOS 快捷键，支持多屏广播输入和 Tab Navigator",
+          "开箱即用的默认值：JetBrains Mono、macOS 级字体渲染、跟随系统的深浅色主题",
+          "内置 AI 助手：命令失败时草拟修复，把自然语言转成命令",
+          "预置 shell 套件：Lazygit、Yazi、远程文件、z、补全、语法高亮",
+          "完整兼容 WezTerm Lua API，已有配置无需迁移",
+          "二进制体积比上游小约 40%，启动快"
+        ],
+        "sameAs": [
+          "https://github.com/tw93/Kaku",
+          "https://github.com/tw93",
+          "https://x.com/HiTw93",
+          "https://kaku.fun"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Tw93",
+          "url": "https://tw93.fun",
+          "sameAs": [
+            "https://github.com/tw93",
+            "https://x.com/HiTw93"
+          ]
+        },
+        "publisher": {
+          "@id": "https://kaku.fun/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://github.com/tw93/Kaku/releases/latest"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kaku.fun/#organization",
+        "name": "Kaku",
+        "alternateName": "The Kaku project",
+        "description": "Kaku 是 Tw93 的独立 MIT 开源项目，全程公开在 GitHub 上开发。背后没有公司、没有销售、没有付费档位。",
+        "url": "https://kaku.fun",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kaku.fun/img/kaku-mark.png",
+          "width": 400,
+          "height": 400
+        },
+        "foundingDate": "2026-02",
+        "founder": {
+          "@type": "Person",
+          "name": "Tw93",
+          "url": "https://tw93.fun"
+        },
+        "sameAs": [
+          "https://github.com/tw93/Kaku",
+          "https://github.com/tw93",
+          "https://x.com/HiTw93",
+          "https://tw93.fun"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "technical support",
+            "url": "https://github.com/tw93/Kaku/issues",
+            "availableLanguage": [
+              "en",
+              "zh-CN"
+            ]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://github.com/tw93/Kaku/discussions",
+            "availableLanguage": [
+              "en",
+              "zh-CN"
+            ]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "security",
+            "url": "https://github.com/tw93/Kaku/security/advisories/new",
+            "availableLanguage": [
+              "en"
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kaku.fun/#website",
+        "name": "Kaku",
+        "url": "https://kaku.fun",
+        "description": "Kaku 的中文文档与下载站点。Kaku 是一个开箱即用的快速 macOS 终端，为 AI 编码而生。",
+        "inLanguage": [
+          "en",
+          "zh-CN"
+        ],
+        "publisher": {
+          "@id": "https://kaku.fun/#organization"
+        },
+        "about": {
+          "@id": "https://kaku.fun/#software"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://kaku.fun/zh/#webpage",
+        "url": "https://kaku.fun/zh/",
+        "name": "Kaku · 为 AI 编码而生的终端",
+        "isPartOf": {
+          "@id": "https://kaku.fun/#website"
+        },
+        "about": {
+          "@id": "https://kaku.fun/#software"
+        },
+        "inLanguage": "zh-CN",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".hero h1",
+            ".hero-sub",
+            ".hero-trust"
+          ]
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://kaku.fun/zh/index.md"
+        }
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -238,6 +366,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wide footer-inner"><div class="footer-mark"><img src="/img/kaku-mark.png" width="64" height="64" alt="Kaku" loading="lazy"><div><p class="wm-name">Kaku · 書</p><p class="wm-sub">AI 编码时代的 macOS 终端。</p></div></div><div class="footer-colophon"><p class="footer-links"><a href="/zh/roadmap">Roadmap</a> · <a href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">Changelog</a> · <a href="/zh/docs/">文档</a> · <a href="https://github.com/tw93/Kaku">GitHub</a> · <a href="https://github.com/tw93/Kaku/issues">Issues</a> · <a href="https://twitter.com/HiTw93">X</a></p><p class="footer-ethos">Tw93 出品。愿终端不再挡你的路。 · Built on WezTerm · MIT · © 2026</p></div></div></footer>
+  <footer class="site-footer"><div class="wide footer-inner"><div class="footer-mark"><img src="/img/kaku-mark.png" width="64" height="64" alt="Kaku" loading="lazy"><div><p class="wm-name">Kaku · 書</p><p class="wm-sub">AI 编码时代的 macOS 终端。</p></div></div><div class="footer-colophon"><p class="footer-links"><a href="/zh/about">关于</a> · <a href="/zh/contact">联系</a> · <a href="/zh/privacy">隐私</a> · <a href="/zh/roadmap">Roadmap</a> · <a href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">Changelog</a> · <a href="/zh/docs/">文档</a> · <a href="https://github.com/tw93/Kaku">GitHub</a> · <a href="https://github.com/tw93/Kaku/issues">Issues</a> · <a href="https://twitter.com/HiTw93">X</a></p><p class="footer-ethos">Tw93 做的。好的终端不该挡路。 · Built on WezTerm · MIT · © 2026</p></div></div></footer>
 </body>
 </html>

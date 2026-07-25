@@ -19,35 +19,138 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-kaku-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-kaku-192.png"><link rel="apple-touch-icon" href="/img/favicon-kaku-180.png">
   <link rel="alternate" hreflang="en" href="https://kaku.fun/">
   <link rel="canonical" href="https://kaku.fun/">
+  <link rel="alternate" type="text/markdown" href="https://kaku.fun/index.md">
   <link rel="alternate" hreflang="zh-CN" href="https://kaku.fun/zh/">
   <link rel="alternate" hreflang="x-default" href="https://kaku.fun/">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Kaku",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "macOS",
-    "softwareVersion": "0.14.0",
-    "url": "https://kaku.fun",
-    "downloadUrl": "https://github.com/tw93/Kaku/releases/latest",
-    "license": "https://opensource.org/licenses/MIT",
-    "sameAs": "https://github.com/tw93/Kaku",
-    "author": {
-      "@type": "Person",
-      "name": "Tw93",
-      "url": "https://tw93.fun",
-      "sameAs": [
-        "https://github.com/tw93",
-        "https://x.com/HiTw93"
-      ]
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://kaku.fun/#software",
+        "name": "Kaku",
+        "alternateName": "Kaku Terminal",
+        "description": "Kaku is a fast, out-of-the-box macOS terminal built for AI coding. Derived from WezTerm, it ships JetBrains Mono, macOS-quality font rendering, automatic dark and light themes, fast tabs and split panes on native macOS shortcuts, a curated shell suite, and an optional AI assistant that drafts a fix when a command fails. MIT licensed, no account, no telemetry.",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Terminal Emulator",
+        "operatingSystem": "macOS",
+        "softwareVersion": "0.14.0",
+        "url": "https://kaku.fun",
+        "downloadUrl": "https://github.com/tw93/Kaku/releases/latest",
+        "installUrl": "https://github.com/tw93/Kaku/releases/latest",
+        "softwareHelp": "https://kaku.fun/docs/",
+        "screenshot": "https://kaku.fun/shots/kaku-og.webp",
+        "license": "https://opensource.org/licenses/MIT",
+        "isBasedOn": "https://wezterm.org",
+        "featureList": [
+          "Tabs and split panes on native macOS shortcuts, with pane broadcast and a Tab Navigator",
+          "Out-of-the-box defaults: JetBrains Mono, macOS font rendering, automatic dark and light themes",
+          "Built-in AI assistant that drafts a fix for failed commands and turns plain language into commands",
+          "Curated shell suite: Lazygit, Yazi, remote files, z, completion, syntax highlighting",
+          "Full WezTerm Lua API compatibility, so existing configs work with no migration",
+          "Roughly 40% smaller binary than upstream, with fast startup"
+        ],
+        "sameAs": [
+          "https://github.com/tw93/Kaku",
+          "https://github.com/tw93",
+          "https://x.com/HiTw93",
+          "https://kaku.fun"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Tw93",
+          "url": "https://tw93.fun",
+          "sameAs": [
+            "https://github.com/tw93",
+            "https://x.com/HiTw93"
+          ]
+        },
+        "publisher": { "@id": "https://kaku.fun/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://github.com/tw93/Kaku/releases/latest"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kaku.fun/#organization",
+        "name": "Kaku",
+        "alternateName": "The Kaku project",
+        "description": "Kaku is an independent, MIT-licensed open source project by Tw93, developed in public on GitHub. There is no company behind it, no sales team, and no paid tier.",
+        "url": "https://kaku.fun",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kaku.fun/img/kaku-mark.png",
+          "width": 400,
+          "height": 400
+        },
+        "foundingDate": "2026-02",
+        "founder": {
+          "@type": "Person",
+          "name": "Tw93",
+          "url": "https://tw93.fun"
+        },
+        "sameAs": [
+          "https://github.com/tw93/Kaku",
+          "https://github.com/tw93",
+          "https://x.com/HiTw93",
+          "https://tw93.fun"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "technical support",
+            "url": "https://github.com/tw93/Kaku/issues",
+            "availableLanguage": ["en", "zh-CN"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://github.com/tw93/Kaku/discussions",
+            "availableLanguage": ["en", "zh-CN"]
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "security",
+            "url": "https://github.com/tw93/Kaku/security/advisories/new",
+            "availableLanguage": ["en"]
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kaku.fun/#website",
+        "name": "Kaku",
+        "url": "https://kaku.fun",
+        "description": "Documentation and download site for Kaku, a fast, out-of-the-box macOS terminal built for AI coding.",
+        "inLanguage": ["en", "zh-CN"],
+        "publisher": { "@id": "https://kaku.fun/#organization" },
+        "about": { "@id": "https://kaku.fun/#software" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://kaku.fun/#webpage",
+        "url": "https://kaku.fun/",
+        "name": "Kaku · A fast terminal for AI coding",
+        "isPartOf": { "@id": "https://kaku.fun/#website" },
+        "about": { "@id": "https://kaku.fun/#software" },
+        "inLanguage": "en",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero-sub", ".hero-trust"]
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://kaku.fun/index.md"
+        }
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -152,6 +255,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wide footer-inner"><div class="footer-mark"><img src="/img/kaku-mark.png" width="64" height="64" alt="Kaku" loading="lazy"><div><p class="wm-name">Kaku · 書</p><p class="wm-sub">A macOS terminal for AI coding.</p></div></div><div class="footer-colophon"><p class="footer-links"><a href="/roadmap">Roadmap</a> · <a href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">Changelog</a> · <a href="/docs/">Docs</a> · <a href="https://github.com/tw93/Kaku">GitHub</a> · <a href="https://github.com/tw93/Kaku/issues">Issues</a> · <a href="https://twitter.com/HiTw93">X</a></p><p class="footer-ethos">Built by Tw93. May your terminal stay out of the way. · Built on WezTerm · MIT · © 2026</p></div></div></footer>
+  <footer class="site-footer"><div class="wide footer-inner"><div class="footer-mark"><img src="/img/kaku-mark.png" width="64" height="64" alt="Kaku" loading="lazy"><div><p class="wm-name">Kaku · 書</p><p class="wm-sub">A macOS terminal for AI coding.</p></div></div><div class="footer-colophon"><p class="footer-links"><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/roadmap">Roadmap</a> · <a href="https://github.com/tw93/Kaku/releases" target="_blank" rel="noopener noreferrer">Changelog</a> · <a href="/docs/">Docs</a> · <a href="https://github.com/tw93/Kaku">GitHub</a> · <a href="https://github.com/tw93/Kaku/issues">Issues</a> · <a href="https://twitter.com/HiTw93">X</a></p><p class="footer-ethos">Built by Tw93. May your terminal stay out of the way. · Built on WezTerm · MIT · © 2026</p></div></div></footer>
 </body>
 </html>

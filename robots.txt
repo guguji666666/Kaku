@@ -42,8 +42,12 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-# Everyone else (Googlebot, Bingbot, Applebot, etc.): allowed
+# Everyone else (Googlebot, Bingbot, Applebot, etc.): allowed.
+# Content Signals (https://contentsignals.org): Kaku may be crawled for search
+# and used as AI input (retrieval, grounding, citation), but not as training data.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 Sitemap: https://kaku.fun/sitemap-index.xml
+Schemamap: https://kaku.fun/schemamap.xml

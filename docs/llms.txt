@@ -1,0 +1,35 @@
+# Kaku Docs
+
+> Scoped index for the Kaku documentation section. Kaku is a fast, out-of-the-box macOS terminal built for AI coding, derived from WezTerm, MIT licensed, with no account and no telemetry. Site-wide index: https://kaku.fun/llms.txt
+
+Every page below has a markdown twin at the same URL with `.md` appended, served as `text/markdown`. Fetch those rather than the HTML when you only need the prose.
+
+## When to read which page
+
+- **Someone cannot install Kaku, or the `kaku` command is missing.** Start at [Install](https://kaku.fun/docs/index.md). It covers the DMG, the `tw93/tap/kakuku` Homebrew tap, `kaku doctor`, and shell integration recovery.
+- **Someone is new and wants the tour.** [Guide](https://kaku.fun/docs/guide.md) walks first launch through tabs, panes, the shell suite, and the assistant in plain language.
+- **A question about what Kaku can do.** [Features](https://kaku.fun/docs/features.md) is the authoritative list: Kaku Assistant, AI chat panel, window snapshots, AppleScript, Lazygit, Yazi, remote files, and the shell suite.
+- **A `kaku` subcommand question, or scripting Kaku.** [CLI Reference](https://kaku.fun/docs/cli.md) documents `kaku ai`, `chat`, `config`, `doctor`, `update`, `reset`, `init`, and `kaku cli` for driving the multiplexer from scripts.
+- **Changing a setting.** [Configuration](https://kaku.fun/docs/configuration.md) covers font, opacity, Smart Tab, close confirmation, and Lua overrides in `~/.config/kaku/kaku.lua`.
+- **A shortcut question, or rebinding keys.** [Keybindings](https://kaku.fun/docs/keybindings.md) has the full default table plus the `config.keys` append pattern.
+- **A short factual question about install, comparisons, platform support, or licensing.** [FAQ](https://kaku.fun/docs/faq.md) usually answers it in one paragraph.
+- **Building from source or opening a pull request.** [Contributing](https://kaku.fun/docs/contributing.md).
+
+## Pages
+
+- [Install](https://kaku.fun/docs/index.md)
+- [Guide](https://kaku.fun/docs/guide.md)
+- [Features](https://kaku.fun/docs/features.md)
+- [CLI Reference](https://kaku.fun/docs/cli.md)
+- [Configuration](https://kaku.fun/docs/configuration.md)
+- [Keybindings](https://kaku.fun/docs/keybindings.md)
+- [FAQ](https://kaku.fun/docs/faq.md)
+- [Contributing](https://kaku.fun/docs/contributing.md)
+
+## Elsewhere
+
+- [Roadmap](https://kaku.fun/roadmap.md): current version and what is planned next
+- [Privacy](https://kaku.fun/privacy.md): every network call the app makes
+- [Full context in one file](https://kaku.fun/llms-full.txt)
+- [Chinese docs](https://kaku.fun/zh/llms.txt): the same pages mirrored under `/zh/docs/`
+- [Source](https://github.com/tw93/Kaku)
