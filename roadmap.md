@@ -1,6 +1,6 @@
 # Roadmap
 
-Kaku is in the 0.14.x line. Current work focuses on clearer setup, dependable AI workflows, and daily terminal polish.
+Kaku is in the 0.16.x line. Current work focuses on clearer setup, dependable AI workflows, and daily terminal polish.
 
 ## Now
 
