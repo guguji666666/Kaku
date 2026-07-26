@@ -791,7 +791,20 @@ button, input { font: inherit; }
   width: 1%;
   white-space: nowrap;
 }
-@media (max-width: 560px) {
+/* Never break an inline code token inside a table: `word-break` on
+   .doc-content code drops its min-content width to one character, which let a
+   key column collapse to ~60px and stack `chat_model_choices` letter by letter.
+   Note the two rules above are looser than they read: `code:only-child` ignores
+   text nodes, so a prose cell that merely contains a code still matches and
+   takes the nowrap branch. That is what squeezed the key column. */
+.doc-content th code, .doc-content td code {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+/* Tables carry nowrap columns, so give them a scroll container as soon as the
+   docs layout reflows rather than letting a wide row clip. */
+@media (max-width: 820px) {
   .doc-content table { display: block; overflow-x: auto; }
 }
 .doc-content blockquote {
