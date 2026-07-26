@@ -31,6 +31,10 @@ Tabs and splits use the macOS shortcuts you already expect, so you rarely need t
 | Reopen a closed tab | `Cmd + Shift + T` | Restores the last tab you closed, in its old folder. |
 | Rename a tab | Double-click its title | Type a name; press Enter to keep it. |
 
+Inside the Tab Navigator, `Backspace` on the highlighted tab closes it, with the same confirmation you get anywhere else. It only closes while the filter box is empty, so you can still delete what you typed.
+
+When you ssh somewhere, that tab shows the host name instead of a local path, so a remote tab is easy to spot. See [Remote Sessions](https://kaku.fun/docs/features#features-remote-sessions) for what else changes on a remote host.
+
 Need to type the same thing into several panes at once? Press `Cmd + Opt + I` to broadcast your keystrokes to every pane in the current tab. The full list lives in [Keybindings](https://kaku.fun/docs/keybindings).
 
 ## The shell, ready to go

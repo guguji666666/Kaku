@@ -163,6 +163,8 @@ Re-open the tabs and panes from your last session on launch. Enabled by default;
 config.restore_previous_session = false  -- default: true
 ```
 
+Panes opened through an ssh domain come back in their remote working directory rather than a local path with the same name. If a saved window cannot be restored, for example when the host is unreachable, Kaku posts a notification saying how many windows were left out, keeps the saved session, and tries again on the next launch.
+
 **Working directory inheritance**
 
 ```lua

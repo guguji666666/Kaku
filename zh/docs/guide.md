@@ -31,6 +31,10 @@
 | 重开刚关的标签 | `Cmd + Shift + T` | 恢复你最后关掉的标签，连同原来的目录。 |
 | 重命名标签 | 双击标签标题 | 输入名字，回车保存。 |
 
+在 Tab Navigator 里，对选中的标签按 `Backspace` 就能关掉它，确认提示和别处一致。只有筛选框为空时才会关标签，所以你照样可以删掉输入的字。
+
+ssh 到别的机器后，那个标签会显示主机名而不是本地路径，远程标签很容易认出来。远程主机上还有哪些行为不同，见[远程会话](https://kaku.fun/zh/docs/features#features-remote-sessions)。
+
 想把同一段内容同时敲进多个面板？按 `Cmd + Opt + I` 把按键广播到当前标签的每个面板。完整列表见[快捷键](https://kaku.fun/zh/docs/keybindings)。
 
 ## 开箱即用的 Shell

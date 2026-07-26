@@ -152,6 +152,10 @@ This is a known interaction between trackpad scroll and Claude Code's streaming 
 
 The yazi remote-files feature (`Cmd+Shift+R`) is designed for SSH sessions and mounts the remote filesystem via sshfs. `Cmd+Shift+Y` is for local yazi. Use `Cmd+Shift+R` when you are inside an SSH pane.
 
+## AI chat won't read files while I'm connected over ssh.
+
+That is deliberate. The tools run on your Mac, but the working directory belongs to the remote host, so reading or running things locally would silently hit a same-named local path. In a remote pane the panel answers from the terminal context and suggests commands for you to run on the host instead. `@cwd` is unavailable there for the same reason. To use the tools on remote files, mount them first with `Cmd + Shift + R`.
+
 ## The `y` shell wrapper doesn't sync my directory on exit.
 
 Make sure the Kaku fish/zsh shell integration is sourced. Check with `kaku doctor`. The `y` wrapper requires the shell init to be loaded. A bare `yazi` call will not sync the directory.

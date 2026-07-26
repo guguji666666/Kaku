@@ -163,6 +163,8 @@ config.copy_strip_leading_whitespace = true  -- default: false
 config.restore_previous_session = false  -- default: true
 ```
 
+通过 ssh 域打开的分屏会回到原来的远程目录，而不是本地一个同名路径。如果某个窗口恢复不了，比如主机连不上，Kaku 会用通知说明有几个窗口没能恢复，并保留已保存的会话，下次启动再试一次。
+
 **工作目录继承**
 
 ```lua

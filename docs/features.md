@@ -49,6 +49,8 @@ Type `# <description>` at the prompt and press Enter to generate a shell command
 # compress the src folder excluding node_modules
 ```
 
+`#` generation and the automatic command fix go through the same provider and credentials as `Cmd + L`, so a Codex or Copilot login works for them too, not only an API key.
+
 The `#` prefix works in both zsh and fish. The original query stays visible while the request is in flight. If the model cannot produce a safe command, it explains instead. Dangerous commands are loaded but flagged for review, never auto-executed.
 
 **assistant.toml fields**
@@ -69,7 +71,7 @@ The config lives at `~/.config/kaku/assistant.toml`:
 | `web_search_api_key` | API key for the selected search backend |
 | `web_fetch_script` | Optional custom URL-to-Markdown fetch script |
 | `chat_tools_enabled` | Set to `false` to disable tool calling for chat services without tool support |
-| `auth_type` | Advanced auth mode, e.g. `api_key` or `codex` |
+| `auth_type` | Advanced auth mode: `api_key`, `codex`, or `copilot`. The settings panel offers the first two; `copilot` is set by hand |
 | `memory_curator_model` | Optional cheaper model for background memory curation |
 
 Older configs may still contain `fast_model`; Kaku treats it as the Simple Model and folds it back into `model` the next time the assistant settings are saved.
@@ -85,7 +87,7 @@ Kaku ships a minimal AppleScript dictionary so it shows up in Script Editor and 
 ```applescript
 tell application "Kaku"
   get name        -- "Kaku"
-  get version     -- e.g. "0.14.0"
+  get version     -- e.g. "0.16.0"
   get frontmost   -- true / false
   quit            -- optional `saving ask|yes|no`
 end tell
@@ -108,6 +110,14 @@ Press `Cmd + Shift + Y` to launch yazi in the current pane. The shell wrapper `y
 **Theme sync**: Kaku automatically updates `~/.config/yazi/theme.toml` to match the active color scheme (Kaku Dark or Kaku Light). No manual yazi theme setup needed.
 
 Install yazi with `brew install yazi` or via `kaku init`.
+
+## Remote Sessions
+
+When a pane is connected to another machine, Kaku labels the tab with an ssh glyph and the host name instead of a local path, so remote tabs read differently at a glance. In a split tab only the remote pane contributes its host name to the title, so you can tell which side is local. Kaku recognizes `ssh`, `mosh`, `autossh`, and `et` sessions.
+
+The AI chat panel behaves differently inside a remote pane. Local file and shell tools are turned off, because the working directory belongs to the other host and running them here would hit same-named local paths instead. The panel answers from what is on screen and suggests commands for you to run on the remote host. `@cwd` is unavailable there and says so rather than attaching the wrong directory.
+
+The bundled zsh, fish, and bash integrations wrap `ssh` the same way: they fall back to `xterm-256color` when the remote host has no `kaku` terminfo entry, and `mosh` gets the same fallback. If you define your own `ssh` function, Kaku leaves it alone.
 
 ## Remote Files
 
@@ -134,7 +144,7 @@ Run `kaku init` to provision `~/.config/kaku/fish/kaku.fish` for fish users. `ka
 
 **Optional tools (installed via `kaku init`)**
 
-- **Starship**: Fast, customizable prompt with git and environment info.
+- **Starship**: Fast, customizable prompt with git and environment info. Kaku only applies it inside Kaku, so your other terminals keep their own prompt.
 - **Delta**: Syntax-highlighting pager for git diff and grep.
 - **Lazygit**: Terminal git UI.
 - **Yazi**: Terminal file manager.

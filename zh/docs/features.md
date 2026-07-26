@@ -49,6 +49,8 @@ kaku chat
 # compress the src folder excluding node_modules
 ```
 
+`#` 生成和自动修复命令与 `Cmd + L` 走同一个模型和同一份凭据，所以 Codex 或 Copilot 登录同样能用在这里，不是只有 API key 才行。
+
 `#` 前缀在 zsh 和 fish 里都能用。请求进行中你的原始描述一直可见。如果模型给不出安全的命令，它会改成注入一段简短解释。危险命令会被载入但标记为需审查，永不自动执行。
 
 **assistant.toml 字段**
@@ -69,7 +71,7 @@ kaku chat
 | `web_search_api_key` | 所选搜索后端的 API key |
 | `web_fetch_script` | 可选，自定义的 URL 转 Markdown 抓取脚本 |
 | `chat_tools_enabled` | 设为 `false` 可对不支持工具的对话服务关闭工具调用 |
-| `auth_type` | 高级鉴权模式，比如 `api_key` 或 `codex` |
+| `auth_type` | 高级鉴权模式：`api_key`、`codex` 或 `copilot`。设置面板提供前两个，`copilot` 需手动填写 |
 | `memory_curator_model` | 可选，给后台记忆整理用的更便宜的模型 |
 
 旧配置里可能还有 `fast_model`，Kaku 会把它当作 Simple Model， 下次保存 Assistant 设置时再折叠回 `model`。
@@ -85,7 +87,7 @@ Kaku 内置一份极简的 AppleScript 字典，因此它会出现在 Script Edi
 ```applescript
 tell application "Kaku"
   get name        -- "Kaku"
-  get version     -- e.g. "0.14.0"
+  get version     -- e.g. "0.16.0"
   get frontmost   -- true / false
   quit            -- optional `saving ask|yes|no`
 end tell
@@ -108,6 +110,14 @@ end tell
 **主题同步**：Kaku 会自动更新 `~/.config/yazi/theme.toml`，匹配当前色彩方案，无需手动配置。
 
 用 `brew install yazi` 或 `kaku init` 安装 yazi。
+
+## 远程会话
+
+某个分屏连到了别的机器时，Kaku 会在标签上显示一个 ssh 图标和主机名，而不是本地路径，远程标签一眼就能认出来。分屏的标签里只有远程那一侧会贡献主机名，所以你能看出哪边是本地。`ssh`、`mosh`、`autossh`、`et` 会话都能识别。
+
+在远程分屏里，AI 聊天的行为会变。本地的文件和 shell 工具会关掉，因为当前目录属于另一台主机，在本地跑这些工具只会打到同名的本地路径上。此时聊天面板基于屏幕上的内容回答，并给出你可以在远程主机上执行的命令。`@cwd` 在这里不可用，并会直接说明原因，而不是附上错的目录。
+
+内置的 zsh、fish、bash 集成对 `ssh` 的包装行为一致：远程主机没有 `kaku` terminfo 时回退到 `xterm-256color`，`mosh` 也有同样的回退。如果你自己定义了 `ssh` 函数，Kaku 不会覆盖它。
 
 ## 远端文件
 
@@ -134,7 +144,7 @@ fish 用户运行 `kaku init` 即可生成 `~/.config/kaku/fish/kaku.fish`。`ka
 
 **可选工具（通过 `kaku init` 安装）**
 
-- **Starship**：快速、可定制的提示符，带 git 和环境信息。
+- **Starship**：快速、可定制的提示符，带 git 和环境信息。Kaku 只在 Kaku 内启用它，你的其他终端保留各自原有的提示符。
 - **Delta**：给 git diff 和 grep 用的语法高亮分页器。
 - **Lazygit**：终端里的 git 界面。
 - **Yazi**：终端文件管理器。

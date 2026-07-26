@@ -28,6 +28,7 @@
 | 上一个标签 | `Cmd + Shift + [` |
 | 下一个标签 | `Cmd + Shift + ]` |
 | 打开 Tab Navigator | `Cmd + Shift + O` |
+| 在 Tab Navigator 里关闭选中的标签 | 筛选框为空时按 `Backspace` |
 | 关闭标签 | `Cmd + Shift + W` |
 | 重开关闭的标签 | `Cmd + Shift + T` |
 | 重命名标签 | 双击标签标题 |

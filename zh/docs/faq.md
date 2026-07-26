@@ -152,6 +152,10 @@ config.line_height = 1.1  -- 或用 1.0 对齐无额外行距的终端
 
 yazi 远端文件功能（`Cmd+Shift+R`）是为 SSH 会话设计的，通过 sshfs 挂载远端文件系统。`Cmd+Shift+Y` 是本地 yazi。SSH 分屏里要用 `Cmd+Shift+R`。
 
+## ssh 连着的时候，AI 聊天不读文件。
+
+这是故意的。工具跑在你的 Mac 上，但当前目录属于远程主机，在本地读或跑只会悄悄打到一个同名的本地路径上。在远程分屏里，聊天面板基于终端上的内容回答，并给出你能在主机上执行的命令；`@cwd` 出于同样原因不可用。想让工具处理远程文件，先用 `Cmd + Shift + R` 挂载。
+
 ## `y` 这个 shell 包装退出时不同步当前目录。
 
 确认 shell 集成已 source，用 `kaku doctor` 检查。`y` 包装依赖 shell init，直接调用 `yazi` 不同步目录。
