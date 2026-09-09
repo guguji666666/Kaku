@@ -2321,7 +2321,6 @@ fn parse_models_value(
         let mut seen = HashSet::new();
         models.retain(|model| seen.insert(model.clone()));
     }
-    models.truncate(30);
     Ok(models)
 }
 
@@ -2629,6 +2628,26 @@ mod tests {
         let models = parse_models_value(&serde_json::json!({ "data": [] }), "models API", true)
             .expect("empty model list remains a successful response");
         assert!(models.is_empty());
+    }
+
+    /// A provider that advertises more models than fit on screen must still be
+    /// reported in full: the picker is a view concern, the parser is not the
+    /// place to decide how many models a user may reach (#550).
+    #[test]
+    fn generic_models_parser_keeps_every_advertised_model() {
+        let ids: Vec<String> = (0..170).map(|i| format!("vendor/model-{i:03}")).collect();
+        let data: Vec<serde_json::Value> = ids
+            .iter()
+            .map(|id| serde_json::json!({ "id": id }))
+            .collect();
+
+        let models = parse_models_value(&serde_json::json!({ "data": data }), "models API", true)
+            .expect("well-formed model list parses");
+
+        assert_eq!(models.len(), ids.len());
+        let mut sorted = ids;
+        sorted.sort();
+        assert_eq!(models, sorted);
     }
 
     fn route_mock_sse_lines(lines: &[&str]) -> (String, String) {

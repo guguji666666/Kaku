@@ -1160,10 +1160,7 @@ impl App {
             None => return false,
         };
         match rx.try_recv() {
-            Ok(Ok(mut list)) => {
-                if list.len() > 30 {
-                    list.truncate(30);
-                }
+            Ok(Ok(list)) => {
                 // `available_models[0]` is always the model explicitly configured
                 // for this session. A global saved selection may belong to a
                 // previously used provider, so only restore it when the new
