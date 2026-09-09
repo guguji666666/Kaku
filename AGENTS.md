@@ -111,6 +111,7 @@ For TUI display corruption after interactive CLIs re-render prompts or selection
 | Rust compile check | `make check` |
 | Rust logic change | `make test` |
 | Formatting | `make fmt-check` |
+| Lints | `cargo clippy --locked --all-targets -p kaku -p kaku-gui -p mux -p config -- -D warnings` (`make check` does not run clippy, so a change that passes locally can still turn CI's Clippy job red) |
 | GUI or rendering change | `make app` |
 | Config release change | `./scripts/check_config_release_readiness.sh` and `./scripts/check_release_config.sh` |
 | Release note change | `./scripts/check_release_notes.sh` |
